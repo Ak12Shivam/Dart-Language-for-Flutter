@@ -45,7 +45,7 @@ that code a bit because, in all version of Dart, null is the default value for u
         print(null ?? 12); // <-- prints 12         */
 
  // 4. Conditional property access:-  
- /*  access to a property or method of an object that might be null,put a question mark(?) before the dot(.):
+   access to a property or method of an object that might be null,put a question mark(?) before the dot(.):
                myObject?.someProperty
 
       the preceding code is equivalent to the following:
