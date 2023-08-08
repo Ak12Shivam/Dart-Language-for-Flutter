@@ -1,0 +1,58 @@
+/// ############## DART CHEATSHEET #############////
+
+// 1. String Interpolation:-
+/* the value of an expression inside a string , 
+           use ${expression} 
+   if the expression is an identifier, you can omit the {}. */     
+
+    // for some example//
+  /* string =  '${3+2}'     
+     result = '5'
+
+     string = '${"word".toUpperCase()}'
+     result = 'WORD'
+
+     string = '$myObject'
+     result = the value of myObject.toString() */
+
+// 2. Nullable Variable:-
+/* dart enforces sound null safety. this means values can't be null unless you say they can be.
+   types default to non-nullable. 
+   A variable of type (int) can't have the value (null):  */
+
+     // for some example//
+  /* int a = null;  // INVALID//
+
+When creating a variable , add? to the type to indicate that the variable can be null:  
+       int? a = null; // VALID//
+
+that code a bit because, in all version of Dart, null is the default value for uninitialized variables:   
+     int? a;  // the initial value of a is null//    */
+
+// 3. Null-aware Operators:-
+/* for handy operations for dealing with values that might be null. */
+
+         // for some example//
+      /* one is the ??= assignment operator,which assigns a value to a variable only if that variable is currently null:  
+           int? a; // = null
+           a??= 3;
+           print(a);  // <-- prints 3 
+
+        null-aware operator is ??, which returns the expressions on its left unless that expression's 
+        value is null, in which case it evalutes and returns the 
+        expression on its right:  
+        print(1 ?? 3);  // <-- print 1
+        print(null ?? 12); // <-- prints 12         */
+
+ // 4. Conditional property access:-  
+ /*  access to a property or method of an object that might be null,put a question mark(?) before the dot(.):
+               myObject?.someProperty
+
+      the preceding code is equivalent to the following:
+               (myObject != null) ? myObject.someProperty : null  
+
+      you can chain multiple uses of ?. together in a single expression:
+              myObject?.someProperty?.someMethod()      
+
+   => the preceding code returns null(and never calls someMethod())  
+      if either myObject or myObject.someProperty is null          
